@@ -13,10 +13,10 @@ const startServer = ()=> {
  
     app.use(express.json());
 
-    app.use("api/auth", authRouter);
+    app.use("/api/auth", authRouter);
 
     app.use(notFoundHandler);
-    
+
     app.use(errorHandler);
 
     const port = Number(process.env.PORT) || 3000;
